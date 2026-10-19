@@ -81,6 +81,14 @@ footer{padding:60px 0 32px;border-top:1px solid var(--line);background:var(--car
 .footer-contact-item strong{color:var(--ink);font-weight:600}
 .footer-badge{display:inline-block;padding:4px 12px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-weight:700;font-size:.8rem;margin-top:6px}
 .footer-bottom{padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;color:var(--muted);font-size:.9rem}
+.faq-grid{display:grid;gap:14px;max-width:880px}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 24px;transition:border-color .2s ease, background-color .2s ease}
+.faq-item[open]{border-color:var(--accent)}
+.faq-item summary{font:800 1.15rem var(--display);letter-spacing:-.01em;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-icon{width:26px;height:26px;border-radius:50%;background:var(--line);display:grid;place-items:center;font-weight:700;font-size:1.1rem;flex-shrink:0;transition:transform .2s ease, background .2s ease;color:var(--ink)}
+.faq-item[open] .faq-icon{transform:rotate(45deg);background:var(--accent);color:var(--on-accent)}
+.faq-answer{margin:12px 0 0;color:var(--muted);font-size:1rem;line-height:1.6}
 @media (max-width:860px){
   .hero{grid-template-columns:1fr;padding-top:32px;min-height:0}
   .stage{height:min(100vw,520px);min-height:380px}
@@ -104,6 +112,7 @@ footer{padding:60px 0 32px;border-top:1px solid var(--line);background:var(--car
       <a class="l" href="#shop">In the shop</a>
       <a class="l" href="#visit">Visit</a>
       <a class="l" href="#reviews">Reviews</a>
+      <a class="l" href="#faq">FAQ</a>
       <a class="btn sm" href="tel:+919303842111">Call now</a>
     </nav>
   </div>
@@ -168,6 +177,63 @@ footer{padding:60px 0 32px;border-top:1px solid var(--line);background:var(--car
       </div>
     </div>
   </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <details class="faq-item" open>
+          <summary>
+            <span>Do you offer repair services?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <p class="faq-answer">
+            Yes! We provide express repair services for smartphones, including display and broken screen replacements, battery changes, charging port repairs, and speaker fixes. Bring your phone to Shop No. 26, Rajeev Plaza for an instant diagnosis.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Do you accept trade-ins or exchange old phones?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <p class="faq-answer">
+            Yes, we offer phone trade-in and exchange options. Bring your current device to Ashu Mobile in Rajeev Plaza for a quick physical inspection and valuation toward your new phone.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Are all smartphones and accessories original?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <p class="faq-answer">
+            100% yes. All mobile phones, fast chargers, cables, and Bluetooth earbuds sold at Ashu Mobile are genuine, brand-original products backed by official brand warranties.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Can I check stock and prices before visiting?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <p class="faq-answer">
+            Absolutely! You can call us directly at <a href="tel:+919303842111" style="color:var(--accent);font-weight:600;">093038 42111</a> before traveling to confirm which models and color variants are in stock today.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>What are your store operating hours?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <p class="faq-answer">
+            Ashu Mobile is open 7 days a week from 10:00 AM to 9:00 PM at Shop No. 26, Rajeev Plaza, Jayendraganj, Shinde Ki Chhawani, Gwalior.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -189,6 +255,7 @@ footer{padding:60px 0 32px;border-top:1px solid var(--line);background:var(--car
           <li><a href="#shop">What to Ask Us</a></li>
           <li><a href="#visit">Location & Hours</a></li>
           <li><a href="#reviews">Google Reviews</a></li>
+          <li><a href="#faq">FAQ & Trade-Ins</a></li>
           <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ashu+Mobile+Rajeev+Plaza+Gwalior" target="_blank" rel="noopener">Get Directions</a></li>
         </ul>
       </div>
