@@ -4,11 +4,15 @@
   "description": "Ashu Mobile – Cell phone store in Rajeev Plaza, Gwalior",
   "type": "module",
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js",
-    "build": "echo 'Static build complete'"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite preview"
   },
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "vite": "^8.3.4"
   }
 }
