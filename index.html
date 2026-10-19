@@ -70,16 +70,26 @@ address{font-style:normal;margin:0 0 20px;font-size:1.15rem}
 .panel.sun{background:var(--sun);color:var(--on-sun);border-color:var(--sun)}
 .panel.sun .btn{background:#fff;border-color:#fff;color:#11183A}
 .btn.rev{margin-top:8px}
-footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+footer{padding:60px 0 32px;border-top:1px solid var(--line);background:var(--card);color:var(--ink);font-size:.95rem}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:44px}
+.footer-col h4{font:800 1.15rem var(--display);letter-spacing:-.01em;margin:0 0 16px;color:var(--ink)}
+.footer-col p{color:var(--muted);font-size:.95rem;line-height:1.6;margin:0 0 16px;max-width:32ch}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.footer-links a{color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s ease}
+.footer-links a:hover{color:var(--accent)}
+.footer-contact-item{display:flex;flex-direction:column;gap:4px;margin-bottom:14px;color:var(--muted);font-size:.92rem}
+.footer-contact-item strong{color:var(--ink);font-weight:600}
+.footer-badge{display:inline-block;padding:4px 12px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-weight:700;font-size:.8rem;margin-top:6px}
+.footer-bottom{padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;color:var(--muted);font-size:.9rem}
 @media (max-width:860px){
   .hero{grid-template-columns:1fr;padding-top:32px;min-height:0}
   .stage{height:min(100vw,520px);min-height:380px}
   .visit,.row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
   .row{gap:8px}
   nav a.l{display:none}
 }
-@media (max-width:420px){.btn{width:100%}.cta{flex-direction:column}}
+@media (max-width:520px){.footer-grid{grid-template-columns:1fr}.btn{width:100%}.cta{flex-direction:column}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -162,8 +172,59 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 2
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Ashu Mobile, Gwalior</span>
-    <span>Rajeev Plaza, Jayendraganj · 093038 42111</span>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a class="brand" href="#top" style="margin-bottom:14px;display:inline-flex;">
+          <svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="19.5" r="2.2" fill="#fff"/></svg>
+          Ashu Mobile
+        </a>
+        <p>Your trusted cell phone and accessories store in Rajeev Plaza, Gwalior. Visit us to hold and compare models in person before you buy.</p>
+        <span class="footer-badge">Shop No. 26 · Open Daily</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#top">3D Phone Preview</a></li>
+          <li><a href="#shop">What to Ask Us</a></li>
+          <li><a href="#visit">Location & Hours</a></li>
+          <li><a href="#reviews">Google Reviews</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ashu+Mobile+Rajeev+Plaza+Gwalior" target="_blank" rel="noopener">Get Directions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>In The Shop</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+919303842111">Latest Smartphone Models</a></li>
+          <li><a href="tel:+919303842111">Original Fast Chargers</a></li>
+          <li><a href="tel:+919303842111">Earbuds & Bluetooth Audio</a></li>
+          <li><a href="tel:+919303842111">Tempered Glass & Cases</a></li>
+          <li><a href="tel:+919303842111">Stock & Price Quotes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Store Info & Contact</h4>
+        <div class="footer-contact-item">
+          <strong>Address:</strong>
+          <span>Shop No. 26, Rajeev Plaza, Jayendraganj, Shinde Ki Chhawani, Gwalior, MP 474009</span>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Direct Call:</strong>
+          <a href="tel:+919303842111" style="color:var(--accent);font-weight:700;font-size:1.05rem;">093038 42111</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Store Hours:</strong>
+          <span>Mon – Sun: 10:00 AM – 9:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Ashu Mobile, Gwalior. All rights reserved.</span>
+      <span>Rajeev Plaza, Jayendraganj · 093038 42111</span>
+    </div>
   </div>
 </footer>
 
